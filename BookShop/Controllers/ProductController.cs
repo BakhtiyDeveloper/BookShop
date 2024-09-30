@@ -19,9 +19,12 @@ namespace BookShop.Controllers
         {
             var products = context.Products.OrderByDescending(p => p.BookId).ToList();
 
-            return View();
+            return View(products);
         }
 
-
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
